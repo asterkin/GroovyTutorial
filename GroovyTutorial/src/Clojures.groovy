@@ -7,6 +7,15 @@ class Clojures {
 		more_list_clojures()
 		more_map_clojures()
 		dealing_with_files()
+		dealing_with_strings()		
+	}
+
+	private static dealing_with_strings() {
+		def stringDate = "2005-07-04"
+		def dateArray = stringDate.split("-")	// split() uses regEx's, so you need to escape chars such as a "." -> "\\."
+		def year = dateArray[0].toInteger()
+		year = year + 1
+		println (year + "-" + dateArray[1] + "-" + dateArray[2])
 	}
 
 	private static dealing_with_files() {
