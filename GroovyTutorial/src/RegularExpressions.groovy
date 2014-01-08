@@ -7,6 +7,18 @@ class RegularExpressions {
 		operators()
 		matching_groups()
 		not_matching_groups();
+		replacement();
+	}
+
+	private static replacement() {
+		def excerpt = "At school, Harry had no one. Everybody knew that Dudley's gang hated that odd Harry Potter "+
+				"in his baggy old clothes and broken glasses, and nobody liked to disagree with Dudley's gang.";
+		def matcher = (excerpt =~ /Harry Potter/);
+		excerpt = matcher.replaceAll("Tanya Grotter");
+
+		matcher = (excerpt =~ /Harry/);
+		excerpt = matcher.replaceAll("Tanya");
+		println("Publish it! "+excerpt)
 	}
 
 	private static not_matching_groups() {
